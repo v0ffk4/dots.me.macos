@@ -6,7 +6,7 @@ vim.pack.add({
   "https://github.com/nvim-mini/mini.nvim",
   "https://github.com/stevearc/oil.nvim",
   "https://github.com/vague-theme/vague.nvim",
-  -- "https://github.com/rafamadriz/friendly-snippets",
+  "https://github.com/rafamadriz/friendly-snippets",
   { src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim", branch = "main" },
   { src = "https://github.com/nvim-treesitter/nvim-treesitter",           branch = "main" },
 })
@@ -16,6 +16,7 @@ require("mason-tool-installer").setup({
   ensure_installed = {
     "bash-language-server",
     "codebook",
+    "glslls",
     "lua-language-server",
     "marksman",
     "prettier",

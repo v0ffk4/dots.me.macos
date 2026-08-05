@@ -2,7 +2,7 @@ require("mason").setup()
 
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 vim.keymap.set("n", "<leader>F", vim.lsp.buf.format, { desc = "Format Local buffer" })
-vim.keymap.set("n", "df", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
+vim.keymap.set("n", "<leader>i", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
 
 vim.diagnostic.config({
   virtual_text = false,
@@ -30,6 +30,7 @@ vim.lsp.config("lua_ls", {
 vim.lsp.enable({
   "bashls",
   "codebook",
+  "glslls",
   "lua_ls",
   "marksman",
   "svelte",

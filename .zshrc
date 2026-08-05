@@ -1,15 +1,18 @@
-# me
-
 #system
-alias src='source ~/.zshrc'
 export EDITOR=nvim
+alias src='source ~/.zshrc'
+alias shed='nvim ~/.dots.me.macos/.zshrc'
 
 #vivi
-alias me@vivi='ssh me@vivi'
+alias vivi='ssh me@vivi'
+
+#remotes
+alias sshrg='ssh rebelgroup@141.8.192.184'
 
 #nvim
 alias fvim='NVIM_APPNAME=fvim nvim'
 alias svim='NVIM_APPNAME=svim nvim'
+alias sved='NVIM_APPNAME=svim nvim ~/.dots.me.macos/.config/svim'
 
 #git
 alias sts='git status'
@@ -18,24 +21,18 @@ alias clc='git rm -r cached .'
 
 #tools
 alias lg='lazygit'
-alias ndeploy='netlify deploy --prod'
 alias ddev='deno run dev'
 alias ndev='npm run dev'
+alias wdev='wrangler dev'
 
 #projects
-alias cdnm='cd /Users/dev/apps/newmoon/'
-alias cdal='cd /Users/dev/apps/alia/'
-alias cdtw='cd /Users/dev/apps/techos-web-client'
-alias cdfr='cd /Users/dev/apps/forcel-ref'
-alias cdfn='cd /Users/dev/apps/forcel-webclient-s5'
-alias cdpr='cd /Users/dev/apps/predator-ref/'
+alias cda='cd /Users/dev/apps/'
+#predator
 alias tmpwc='/Users/dev/apps/predator-webclient-v1/tmux@yeri.sh'
 alias tmpww='/Users/dev/apps/predator-cloudflare-form-worker/tmux@yeri.sh'
-alias cdpw='cd /Users/dev/apps/predator-webclient-v1'
-alias cdpww='cd /Users/dev/apps/predator-coludflare-form-worker'
-alias cdpd='cd /Users/dev/apps/rebel-dna'
-alias cdpds='cd /Users/dev/apps/rebel-dna/svelte'
-alias cdpdd='cd /Users/dev/apps/rebel-dna-dist'
+#newmooon
+alias tmnmc='/Users/dev/apps/newmoon/tmux@yeri.sh'
+alias tmnmw='/Users/dev/apps/newmoon-contact-form-worker/tmux@yeri.sh'
 
 #media
 tv() {
@@ -62,3 +59,7 @@ enc-h265-reverse-rotate() {
 #end
 eval "$(fnm env --use-on-cd --shell zsh)"
 eval "$(zoxide init zsh)"
+source <(fzf --zsh)
+
+#pi
+export PATH="/Users/me/.local/share/fnm/node-versions/v24.15.0/installation/bin:$PATH"
